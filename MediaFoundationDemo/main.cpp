@@ -69,6 +69,7 @@ int main(void) {
     for (UINT i = 0; i < count; i++) {
         ppDevices[i]->Release();
     }
+    CoTaskMemFree(ppDevices);
 
     // 카메라 검색 속성 객체 해제
     pConfig->Release();
